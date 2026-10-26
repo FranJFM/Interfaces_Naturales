@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Control por Voz - NUI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      transition: background-color 0.5s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .status {
+      font-weight: bold;
+      color: #007bff;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Panel de Control por Voz</h1>
+    <p>Di ordenes como: <strong>"Rojo"</strong>, <strong>"Verde"</strong>,<strong>"más grande"</strong>,<strong>"más pequeño"</strong>,<strong>"Modo oscuro"</strong>,<strong>"Modo claro"</strong>, <strong>"Azul"</strong> o <strong>"Restablecer"</strong>.</p>
+    <button id="btnStart">Activar Micrófono</button>
+    <p class="status" id="statusText">Estado: Inactivo</p>
+    <p>Último comando detectado: <span id="commandText">-</span></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
