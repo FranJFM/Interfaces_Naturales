@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de la compra por voz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="card">
+    <h1>Lista de la compra por voz</h1>
+    <p>
+      Pulsa el micrófono y di: <strong>"añade leche"</strong>,
+      <strong>"quita leche"</strong> o <strong>"vacía la lista"</strong>.
+    </p>
+
+    <!-- Control de voz -->
+    <button id="btnVoz">Activar Micrófono</button>
+    <p class="status" id="estado" role="status" aria-live="polite">Estado: Inactivo</p>
+
+    <!-- Mensaje con la última respuesta-->
+    <p id="mensaje" aria-live="polite">Preparado.</p>
+
+    <!-- Alternativa sin voz-->
+    <div class="manual">
+      <label for="inputProducto">Producto (sin usar la voz):</label>
+      <input type="text" id="inputProducto" placeholder="Ejemplo: leche">
+      <div>
+        <button id="btnAnadir" type="button">Añadir</button>
+        <button id="btnQuitar" type="button">Quitar</button>
+        <button id="btnVaciar" type="button">Vaciar lista</button>
+      </div>
+    </div>
+
+    <!-- Aqui se hace la lista -->
+    <h2>Mi lista</h2>
+    <ul id="lista"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
